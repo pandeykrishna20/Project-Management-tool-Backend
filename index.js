@@ -5,7 +5,7 @@ require("dotenv").config();
 const cors = require("cors");
 
 
-const PORT = process.env.PORT || 7000;
+const PORT = process.env.PORT || 9000;
 
 // Middleware
 app.use(cors());
