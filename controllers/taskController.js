@@ -81,7 +81,7 @@ exports.deleteTask = async (req, res) => {
             return res.status(403).json({ success: false, message: "Unauthorized or task not found" });
         }
 
-        await task.remove();
+        await task.deleteOne();
 
         res.status(200).json({ success: true, message: "Task deleted" });
     } catch (err) {
@@ -95,7 +95,7 @@ exports.deleteTask = async (req, res) => {
 exports.getTasksByProject = async (req, res) => {
     try {
         const { projectId } = req.params;
-        const { status } = req.query; // e.g., ?status=done
+        const { status } = req.query; 
 
         // Verify that project belongs to the logged-in user
         const project = await Project.findOne({ _id: projectId, user: req.user.id });

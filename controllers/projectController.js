@@ -20,15 +20,15 @@ module.exports.createProject = async (req, res) => {
     }
 };
 
-//Get all projects of logged-in user
+
 module.exports.getUserProjects = async (req, res) => {
-    try {
-        const projects = await Project.find({ user: req.user.id });
-        res.status(200).json({ success: true, projects });
-    } catch (err) {
-        console.error("Get Projects Error:", err);
-        res.status(500).json({ success: false, message: "Server error" });
-    }
+  try {
+    const projects = await Project.find({ user: req.user.id }); 
+    res.status(200).json({ success: true, projects });
+  } catch (err) {
+    console.error("Get Projects Error:", err);
+    res.status(500).json({ success: false, message: "Server error" });
+  }
 };
 
 //Get a single project by ID
