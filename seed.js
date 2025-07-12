@@ -44,9 +44,9 @@ const seed = async () => {
 
     // Create 3 tasks for each project
     const taskTemplates = [
-      { title: "Design UI", description: "Create wireframes", status: "todo" },
-      { title: "Setup backend", description: "API and DB config", status: "in-progress" },
-      { title: "Deploy app", description: "Deploy to production", status: "done" }
+      { title: "Design UI", description: "Create wireframes", status: "todo",dueDate: new Date(now + 1 * 24 * 60 * 60 * 1000) },
+      { title: "Setup backend", description: "API and DB config", status: "in-progress",dueDate: new Date(now + 3 * 24 * 60 * 60 * 1000) },
+      { title: "Deploy app", description: "Deploy to production", status: "done",dueDate: new Date(now + 2 * 24 * 60 * 60 * 1000) }
     ];
 
     for (const project of projects) {
