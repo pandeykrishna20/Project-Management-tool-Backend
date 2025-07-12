@@ -80,15 +80,15 @@ A backend API built using **Node.js**, **Express.js**, and **MongoDB** for manag
 
 ##  API Endpoints (Overview)
 
-| Method | Route                          | Description                 |
-|--------|--------------------------------|-----------------------------|
-| POST   | `/api/user/register`          | Register a new user          |
-| POST   | `/api/user/login`             | Login user and return token |
-| GET    | `/api/projects`                | List all user projects      |
-| POST   | `/api/projects`                | Create new project          |
-| PUT    | `/api/projects/:id`            | Update a project            |
-| GET    | `/api/tasks/:projectId/tasks`  | List tasks by project       |
-| POST   | `/api/tasks/:projectId/tasks`  | Create task for project     |
+| Method | Route                                  | Description                 |
+|--------|--------------------------------        |-----------------------------|
+| POST   | `/api/user/register`                   | Register a new user         |
+| POST   | `/api/user/login`                      | Login user and return token |
+| GET    | `/api/project/projects`                | List all user projects      |
+| POST   | `/api/project/projects`                | Create new project          |
+| PUT    | `/api/project/projects/:id`            | Update a project            |
+| GET    | `/api/task/:projectId/tasks`           | List tasks by project       |
+| POST   | `/api/task/:projectId/tasks`           | Create task for project     |
 
 ---
 
