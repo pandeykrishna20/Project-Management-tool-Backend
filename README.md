@@ -61,13 +61,29 @@ A backend API built using **Node.js**, **Express.js**, and **MongoDB** for manag
   ```
 
 ---
+## Run Seeder (Optional)
+ To populate your database with a sample user, projects, and tasks:
+ 1- Make sure your .env has a working DB_URI
+ 2- Run the following command:
+ 
+               node seed.js
+
+   This will:
+    => Connect to MongoDB
+    => Delete all existing users, projects, and tasks
+    => Create:
+       -> 1 verified user (test@example.com / Test@123)
+       -> 2 projects
+       -> 6 tasks (3 tasks per project)
+
+ 
 
 ##  API Endpoints (Overview)
 
 | Method | Route                          | Description                 |
 |--------|--------------------------------|-----------------------------|
-| POST   | `/api/users/register`          | Register a new user         |
-| POST   | `/api/users/login`             | Login user and return token |
+| POST   | `/api/user/register`          | Register a new user          |
+| POST   | `/api/user/login`             | Login user and return token |
 | GET    | `/api/projects`                | List all user projects      |
 | POST   | `/api/projects`                | Create new project          |
 | PUT    | `/api/projects/:id`            | Update a project            |
